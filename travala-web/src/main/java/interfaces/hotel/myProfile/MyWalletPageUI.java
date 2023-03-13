@@ -1,0 +1,73 @@
+package interfaces.hotel.myProfile;
+
+public class MyWalletPageUI {
+
+  public static final String USER_NAME_LOGGED = "//*[@class='home-hero__subtitle ng-scope']";
+  public static final String MY_WALLET_OVERVIEW_TAB = "//li[contains(@class,'MyWalletPC_active')]";
+  public static final String MY_WALLET_SUMMARY_TAB = "//ul[contains(@class,'MyWalletPC_menu')]/li[2]";
+  public static final String MY_WALLET_WITHDRAW_TAB = "//ul[contains(@class,'MyWalletPC_menu')]/li[3]";
+  public static final String MY_WALLET_DEPOSIT_TAB = "//ul[contains(@class,'MyWalletPC_menu')]/li[4]";
+  public static final String MY_WALLET_MY_WALLET_TITLE = "//div[contains(@class,'Overview_balanceTitle')]/p[1]";
+  public static final String MY_WALLET_TOTAL_BALANCE = "//div[contains(@class,'Overview_balanceTitle')]/p[2]";
+  public static final String MY_WALLET_AVA_WALLET = "//div[contains(@class,'Overview_avaWallet')]/h3";
+  public static final String MY_WALLET_BALANCE_AVA = "(//p[contains(@class,'Overview_label')])[1]";
+  public static final String MY_WALLET_LOCK_AVA = "(//p[contains(@class,'Overview_label')])[2]/span";
+  public static final String MY_WALLET_BNB_WALLET = "//div[contains(@class,'Overview_bnbWallet')]/h3";
+  public static final String MY_WALLET_BUSD_WALLET = "//div[contains(@class,'Overview_busdWallet')]/h3";
+  public static final String MY_WALLET_SUMMARY_FILTER = "(//p[contains(@class,'TransactionHistory')])[1]";
+  public static final String MY_WALLET_SUMMARY_FILTER_SELECT = "(//div[contains(@class,'TransactionHistory_selectedValue')])[1]";
+  public static final String MY_WALLET_SUMMARY_FILTER_SELECT_LIST = "//ul[contains(@class,'History')]/li/label/span";
+  public static final String MY_WALLET_SUMMARY_FILTER_SELECT_DYNAMIC = "(//ul[contains(@class,'History')]/li/label/span)[%s]";
+  public static final String MY_WALLET_SUMMARY_CRYPTO = "(//p[contains(@class,'TransactionHistory_label')])[2]";
+  public static final String MY_WALLET_SUMMARY_CRYPTO_SELECT = "(//div[contains(@class,'TransactionHistory_selectedValue')])[2]";
+  public static final String MY_WALLET_SUMMARY_DATE = "(//p[contains(@class,'TransactionHistory_label')])[3]";
+  public static final String MY_WALLET_SUMMARY_DATE_SELECT = "(//div[contains(@class,'TransactionHistory_selectedValue')])[3]";
+  public static final String MY_WALLET_SUMMARY_TYPE_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[1]";
+  public static final String MY_WALLET_SUMMARY_STATUS_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[2]";
+  public static final String MY_WALLET_SUMMARY_AMOUNT_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[3]";
+  public static final String MY_WALLET_SUMMARY_CRYPTO_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[4]";
+  public static final String MY_WALLET_SUMMARY_DATE_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[5]";
+  public static final String MY_WALLET_SUMMARY_NOTE_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[6]";
+  public static final String MY_WALLET_SUMMARY_INFO_HEADER = "//div[contains(@class,'TransactionHistory_tableContainer')]/table/thead/tr/th[7]";
+  public static final String MY_WALLET_SUMMARY_NO_RECORD = "//div[contains(@class,'TransactionHistory_noRecords')]/p";
+  public static final String MY_WALLET_WITHDRAW_SELECT_CRYPTO = "//div[contains(@class,'CurrencySelect_container')]/label";
+  public static final String MY_WALLET_WITHDRAW_SELECT_CRYPTO_LIST = "//div[contains(@class,'CurrencySelect_selectedLabel')]/span";
+  public static final String MY_WALLET_WITHDRAW_MINIMUM = "(//div[contains(@class,'Withdraw_importantNote')]/p/span)[1]";
+  public static final String MY_WALLET_WITHDRAW_MAX_24HOURS = "(//div[contains(@class,'Withdraw_importantNote')]/p/span)[2]";
+  public static final String MY_WALLET_WITHDRAW_ADDRESS_LABEL = "//h5[contains(@translate,'withdrawalAddress')]";
+  public static final String MY_WALLET_WITHDRAW_ADDRESS_HOLDER = "//input[@name='to_address']";
+  public static final String MY_WALLET_WITHDRAW_ADDRESS_ERROR_MES = "(//span[@class='error-message'])[1]";
+  public static final String MY_WALLET_WITHDRAW_ADDRESS_SAVE_TXT = "(//span[@class='checkbox-label'])[1]";
+  public static final String MY_WALLET_WITHDRAW_ADDRESS_SAVE_CHECKBOX = "(//span[@class='checkbox-checkmark'])[1]";
+  public static final String MY_WALLET_WITHDRAW_SAVE_CHECKBOX_LABEL = "(//div[contains(@class,'Withdraw_labelGroup')])[4]/h5";
+  public static final String MY_WALLET_WITHDRAW_SAVE_CHECKBOX_HOLDER = "//input[@name='wallet_address_label']";
+  public static final String MY_WALLET_WITHDRAW_SAVE_CHECKBOX_HOLDER_ERROR_MES = "//input[@name='wallet_address_label')]/following-sibling::span";
+  public static final String MY_WALLET_WITHDRAW_MEMO_LABEL = "(//div[contains(@class,'Withdraw_labelGroup')]/h5)[2]";
+  public static final String MY_WALLET_WITHDRAW_MEMO_HOLDER = "//input[@name='memo']";
+  public static final String MY_WALLET_WITHDRAW_MEMO_HOLDER_ERROR_MES = "(//span[@class='error-message'])[2]";
+  public static final String MY_WALLET_WITHDRAW_MEMO_NO_TXT = "(//span[@class='checkbox-label'])[2]";
+  public static final String MY_WALLET_WITHDRAW_MEMO_NO_CHECKBOX = "(//span[@class='checkbox-checkmark'])[2]";
+  public static final String MY_WALLET_WITHDRAW_AMOUNT_LABEL = "(//div[contains(@class,'Withdraw_labelGroup')]/h5)[3]";
+  public static final String MY_WALLET_WITHDRAW_AMOUNT_HOLDER = "//input[@name='amount']";
+  public static final String MY_WALLET_WITHDRAW_AMOUNT_HOLDER_ERROR_MES = "//div[contains(@class,'d-flex')]/following-sibling::span";
+  public static final String MY_WALLET_WITHDRAW_AVAILABLE_WITHDRAW = "//div[contains(@class,'Withdraw_amountInput')]/div/p/b";
+  public static final String MY_WALLET_WITHDRAW_USE_MAX = "//button[contains(@class,'Withdraw_btnUseMax')]/span";
+  public static final String MY_WALLET_WITHDRAW_TRANSACTION = "//div[contains(@class,'Withdraw_feeBlock')]/p[1]";
+  public static final String MY_WALLET_WITHDRAW_GET = "//div[contains(@class,'Withdraw_feeBlock')]/p[2]";
+  public static final String MY_WALLET_WITHDRAW_NOTE = "//div[contains(@class,'Withdraw_understandConfirmation')]/p";
+  public static final String MY_WALLET_WITHDRAW_HAVE_READ = "//span[contains(@class,'checkbox-label Withdraw_checkboxLabel')]";
+  public static final String MY_WALLET_WITHDRAW_HAVE_READ_CHECKBOX = "(//span[@class,'checkbox-checkmark'])[3]";
+  public static final String MY_WALLET_WITHDRAW_SUBMIT = "//button[contains(@class,'Withdraw_btnSubmit')]";
+  public static final String MY_WALLET_WITHDRAW_PLEASE_NOTE = "//div[contains(@class,'Withdraw_noteBlock')]/h5";
+  public static final String MY_WALLET_WITHDRAW_PLEASE_NOTE_CONTENT = "//div[contains(@class,'Withdraw_noteBlock')]/p";
+  public static final String MY_WALLET_WITHDRAW_DATE = "//div[contains(@class,'dateRangeWrapper')]/p";
+//=====================DEPOSIT===============================
+public static final String MY_WALLET_DEPOSIT_SELECT_CRYPTO_TXT = "//div[contains(@class,'CurrencySelect_container')]/label";
+public static final String MY_WALLET_DEPOSIT_BEP2_TAB = "//li[contains(@class,'Deposit_active')]";
+public static final String MY_WALLET_DEPOSIT_NEP5_TAB = "//li[contains(@class,'Deposit_active')]/following-sibling::li";
+public static final String MY_WALLET_DEPOSIT_CONTENT = "//p[contains(@class,'warningMessage')]/span";
+public static final String MY_WALLET_DEPOSIT_ADDRESS = "(//div[contains(@class,'addressGroup')]/div/h5)[1]";
+public static final String MY_WALLET_DEPOSIT_MEMO = "(//div[contains(@class,'addressGroup')]/div/h5)[2]";
+public static final String MY_WALLET_DEPOSIT_DATE= "//div[contains(@class,'dateRangeWrapper')]/p";
+
+}
