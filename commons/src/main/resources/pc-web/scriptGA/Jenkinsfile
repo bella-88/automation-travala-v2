@@ -1,0 +1,100 @@
+pipeline {
+    options {
+        timestamps()
+    }
+    environment {
+        FROM = 'bella@travala.com'
+        RECIPIENTS = 'bella@travala.com'
+        ZIP_FILE = "tm4j_result.zip"
+        AUTO_CREATE_TEST_CASES = "true"
+              CYCLE_INFO = ""
+        TEST_SUMMARY = ""
+        isTestFailed = 0
+        BODY = ""
+    }
+
+    agent { label 'linux-node01' }
+    triggers {
+        cron('H 08 * * 1-6')
+        upstream(upstreamProjects: '../automation-test-travala', threshold: hudson.model.Result.SUCCESS)
+    }
+
+    parameters {
+        string(name: 'BRANCH', defaultValue: 'checkScriptGA', description: 'branch name to be run')
+        choice(name: 'ENV', choices: ['stg', 'live'], description: 'Environment to test on')
+        string(name: 'PLAN_NAME', defaultValue: 'Automation Test Build#${BUILD_NUMBER} on ${ENV}', description: 'Test cycle name to be shown in JIRA')
+        string(name: 'PROJECT_KEY', defaultValue: 'TP', description: 'JIRA project key to submit test report')
+        string(name: 'PROJECT_ID', defaultValue: '', description: 'JIRA project ID to submit test report')
+        string(name: 'TEST_SUITE', defaultValue: 'cucumberOptions.TestRunner', description: 'Test suite to be run.')
+    }
+    stages {
+        stage('Code checkout') {
+            steps {
+                git(
+                        url: 'https://github.com/travala/automation-test.git',
+                        credentialsId: 'Bitbucket',
+                        branch: "${params.BRANCH}"
+                )
+            }
+        }
+        stage('Test') {
+            steps {
+                sh "sleep 5m"
+                sh "mvn clean verify -U -Denv=${params.ENV} -Dtest=${params.TEST_SUITE}"
+            }
+        }
+    }
+    post {
+        always {
+            publishHTML([
+                    allowMissing         : true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll              : true,
+                    reportDir            : 'home/ubuntu',
+                    reportFiles          : 'index.html',
+                    reportName           : 'Automation Report',
+                    reportTitles         : ''])
+            archiveArtifacts 'target/site/serenity/**'
+        }
+        success {
+            script {
+                mail(
+                        from: FROM,
+                        to: RECIPIENTS,
+                        subject: "${env.JOB_NAME} #${env.BUILD_NUMBER} The test report is ready",
+                        body: BODY
+                )
+            }
+        }
+        failure {
+            script {
+                if (isTestFailed == 0) {
+                    mail(
+                            from: FROM,
+                            to: RECIPIENTS,
+                            subject: "${env.JOB_NAME} #${env.BUILD_NUMBER} PIPELINE FAILURE",
+                            body: "Detailed info can be found here:\n\nConsole: ${env.BUILD_URL}.\n\n",
+                    )
+                } else {
+                    mail(
+                            from: FROM,
+                            to: RECIPIENTS,
+                            subject: "${env.JOB_NAME} #${env.BUILD_NUMBER} THERE ARE TEST FAILURES",
+                            body: BODY
+                    )
+                }
+            }
+
+        }
+        unstable {
+            script {
+                mail(
+                        from: FROM,
+                        to: RECIPIENTS,
+                        subject: "${env.JOB_NAME} #${env.BUILD_NUMBER} THERE ARE TEST FAILURES",
+                        body: BODY
+                )
+            }
+        }
+    }
+}
