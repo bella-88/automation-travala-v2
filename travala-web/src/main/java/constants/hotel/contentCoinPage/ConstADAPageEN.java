@@ -1,0 +1,54 @@
+package constants.hotel.contentCoinPage;
+
+public class ConstADAPageEN {
+        public static final String CONST_ADA_COIN_NAME ="Cardano (ADA)";
+        public static final String CONST_ADA_BANNER_TITLE1 ="Book Accommodation with ADA";
+        public static final String CONST_ADA_BANNER_TITLE2 ="More than 2,200,000 Hotels & Accommodations ready to be purchased in ADA";
+        public static final String CONST_ADA_BANNER_TITLE_ACTIVITIES1 ="Book Tours and Activities with ADA";
+        public static final String CONST_ADA_BANNER_TITLE_ACTIVITIES2 ="More than 410,000 Activities, Tours and Experiences ready to be purchased in ADA";
+        public static final String CONST_ADA_BANNER_TITLE_FLIGHT1 ="Book Flights with ADA";
+        public static final String CONST_ADA_BANNER_TITLE_FLIGHT2 ="More than 600 Airlines ready to be purchased in ADA";
+        public static final String CONST_ADA_WHAT_IS_TITLE ="What is ADA?";
+        public static final String CONST_ADA_WHAT_IS_CONTENT ="ADA is a third-generation, decentralized proof-of-stake (PoS) blockchain platform designed to be a more efficient alternative to proof-of-work (PoW) networks like Bitcoin and Ethereum. ADA cryptocurrency runs on the Cardano blockchain, which is based completely on scientific and mathematical principles. It was designed by experts in the fields of cryptography and engineering.";
+        public static final String CONST_ADA_MISSION_CONTENT ="Cardano’s mission is to provide a blockchain platform for changemakers, innovators, and visionaries. Their goal is to provide the tools and technologies required to create possibilities for the many, as well as the few, and bring about positive global change. They are committed to establishing a transparent and decentralized platform that is impartial and unbiased. To do this, they are committed to ensuring that robust governance, standards, and ethics exist and are upheld.";
+
+        public static final String CONST_ADA_USE_CASE_CONTENT1 ="ADA has numerous use cases, among which is the ability to book over 3,000,000 travel products on Travala.com, including hotels, homes, flights, and activities. With accommodation in over 230 countries and territories, 600+ airlines, and more than 400,000 activities, Travala.com’s selection provides travelers with extensive choice when booking with ADA.";
+        public static final String CONST_ADA_USE_CASE_CONTENT2 ="Travala.com’s intuitive booking experience is designed to be familiar and simple to navigate. Travellers simply choose their desired travel product(s), enter their details, and select from the variety of available payment options, including traditional credit and debit cards, AVA, and 40+ other cryptocurrencies.";
+        public static final String CONST_ADA_MORE_USE_CASE_CONTENT1 ="As the biggest proof-of-stake blockchain, ADA can be traded on the most widely used cryptocurrency trading platforms. The third generation crypto utilizes new developments such as layered architecture to improve scalability, security, and sustainability. This rectifies some of the inefficiencies of previous blockchains like Bitcoin and Ethereum.";
+        public static final String CONST_ADA_MORE_USE_CASE_CONTENT2 ="Cardano, as a proof-of-stake blockchain, works by having certain “validators” put up a stake of their cryptocurrency to attest to the validity of a block in the blockchain. Through this staking system, validators help secure the network and earn rewards in the process.";
+        public static final String CONST_ADA_MORE_USE_CASE_CONTENT3 ="Cardano offers smart contracts, an automated digital agreement written in code, that tracks, verifies, and executes the binding transactions of a contract between various parties. They are stored on, and distributed across, a decentralised blockchain network, making it transparent and irreversible. ";
+        public static final String CONST_ADA_MORE_USE_CASE_CONTENT4 ="Through smart contracts, ADA can be exchanged for ADA-based assets. Non-fungible tokens (NFTs) represent ownership of a unique item such as a digital artwork or collectible. ADA’s smart contracts can ensure that the exchange of NFTs for cryptocurrency can occur securely. The system also ensures that creation and ownership is verifiable and each token is minted with a unique identifier. Although not the first crypto to offer NFT trading, ADA typically has far smaller fees than coins like Ethereum. ";
+        public static final String CONST_ADA_HOW_TO_PAY1 ="Visit Travala.com and search for a hotel, home, flight, or other travel product by entering your destination and dates.";
+        public static final String CONST_ADA_HOW_TO_PAY2 ="Select your desired choice from the available options.";
+        public static final String CONST_ADA_HOW_TO_PAY3 ="Enter the required traveller details.";
+        public static final String CONST_ADA_HOW_TO_PAY4 ="Select Crypto as your payment method, then select ADA.";
+        public static final String CONST_ADA_HOW_TO_PAY5 ="Click Complete Reservation. In your ADA wallet, input the generated address by scanning the provided QR code or by copying the text. Ensure that the exact ADA amount is entered and send the payment.";
+        public static final String CONST_ADA_HOW_TO_PAY6 ="Click Payment sent. Your transaction will be processed, and you will receive a confirmation email once your voucher or e-ticket is available.";
+        public static final String CONST_ADA_TEAM_SUB ="Charles Hoskinson, the mathematician and co-founder of Ethereum, began the development of Cardano in 2015 and launched the platform in 2017. Oversight of the advancement of Cardano is decentralized and responsibilities are shared by Cardano's three partners: The Cardano Foundation, IOHK, and EMURGO.";
+        public static final String CONST_ADA_MARKET_TITLE ="ADA Markets";
+        public static final String CONST_ADA_USE_CASE_TITLE ="ADA Use Cases";
+        public static final String CONST_ADA_USE_CASE_SUB2 ="More Use Cases The use cases of ADA extend beyond the Travala.com platform.";
+        public static final String CONST_ADA_PAY_TITLE ="How to Pay with ADA";
+        public static final String CONST_ADA_TRADE_TITLE ="Buy, Sell and Trade ADA";
+        public static final String CONST_ADA_TRADE_SUB ="Exchanges and partners where you can buy, sell and trade ADA:";
+        public static final String CONST_ADA_STORE_TITLE ="Store ADA";
+        public static final String CONST_ADA_STORE_SUB ="Store your ADA securely with the following wallets:";
+        public static final String CONST_ADA_TEAM_ITEM_TITLE1 ="Cardano Foundation";
+        public static final String CONST_ADA_TEAM_ITEM_TITLE2 ="IOHK";
+        public static final String CONST_ADA_TEAM_ITEM_TITLE3 ="EMURGO";
+        public static final String CONST_ADA_TEAM_ITEM_POSITION1 ="";
+        public static final String CONST_ADA_TEAM_ITEM_POSITION2 ="";
+        public static final String CONST_ADA_TEAM_ITEM_POSITION3 ="";
+        public static final String CONST_ADA_TEAM_ITEM_DES1 ="EMURGO specializes in developing software solutions utilizing blockchain, IoT, and AI, and other emerging technologies.";
+        public static final String CONST_ADA_TEAM_ITEM_DES2 ="Driving adoption of Cardano, shaping Legislation and Commercial Standards. Growing the Global Cardano Community.";
+        public static final String CONST_ADA_TEAM_ITEM_DES3 ="Founded in 2015, IOHK is one of the world’s pre-eminent blockchain research and engineering companies, best known for the Cardano blockchain platform. They are a fully decentralized, remote-working organization committed to the highest principles of academic rigour and evidence-based software development. The company builds high-assurance blockchain products for public and private sector clients. IOHK’s goal is simple – to fuel their drive to be best in class by giving the community the opportunity, resources and support to deliver their finest work to date. There are some exceptionally talented and friendly individuals who are always open to new ideas and ways of working. IOHK is an advocate of decentralized remote working, with over 300 people working in more than 50 countries. Everyone has a different skill set, a different culture, and is at a different stage in their life. We aim to make collaboration between diverse people fun, exciting, and always rewarding. Many companies say they ‘think outside the box’ – for IOHK it’s more, ‘we think outside the geography";
+        public static final String CONST_ADA_FAQ_TITLE1 ="How are Cardano and Etherum Different?";
+        public static final String CONST_ADA_FAQ_TITLE2 ="What is Cardano staking and how can I benefit from it?";
+        public static final String CONST_ADA_FAQ_TITLE3 ="Who developed Cardano?";
+        public static final String CONST_ADA_FAQ_TITLE4 ="How Can I Get Cardano Updates?";
+        public static final String CONST_ADA_FAQ_CONTENT1 ="Both platforms are used for similar applications, such as smart contracts, and have goals of building a connected and decentralized system. However, Cardano and Ethereum attempt to achieve these goals through different blockchains. Ethereum’s Proof-of-Work blockchain has a network of miners that computes complex calculations to keep the blockchain running. As a result, an Ether - Etherum’s cryptocurrency - is worth a certain amount of computing power. Ethereum’s scalability, interoperability, and sustainability are limited by the infrastructure burden of growing costs, energy use, and slow transaction times. Comparatively, a Proof-of-Stake consensus replaces miners with validators. Proof-Of-Stake mining requires a lot less energy and fewer resources. Cardano only requires a small number of Ada holders to be online and to maintain good network connectivity. This has the added benefit of transactions being validated quickly and cheaply.";
+        public static final String CONST_ADA_FAQ_CONTENT2 ="You can earn passive ADA through staking. It’s similar to earning interest in your crypto holdings. Usually, staking means you agree to lock up your tokens for a certain period of time, during which they are unspendable. However, this is not the case with Cardano. By staking your ADA, you actively support the Cardano network by allocating resources to it and contributing to the stability of the network. In return for your support, you earn ADA tokens as a reward.";
+        public static final String CONST_ADA_FAQ_CONTENT3 ="Cardano has a decentralized team of developers. The team of developers work across three independent entities. Each team supports the project by implementing set standards to ensure the interoperability within the ecosystem.";
+        public static final String CONST_ADA_FAQ_CONTENT4 ="There are many ways to stay up to date on the most recent Cardano news, updates, and information. Telegram, Twitter, Facebook, Reddit, and YouTube are good starting points.";
+
+}
