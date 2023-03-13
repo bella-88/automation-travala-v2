@@ -1,0 +1,47 @@
+package pages.hotel.footer.travala;
+
+import org.openqa.selenium.WebDriver;
+
+import commons.hotel.CommonHotelPages;
+import static commons.CommonHotelURL.*;
+import static interfaces.hotel.footer.travala.TravelMemberPageUI.*;
+
+public class TravelMemberPage extends CommonHotelPages {
+  WebDriver driver;
+  boolean status = true;
+
+  public TravelMemberPage(WebDriver driver_) {
+    this.driver = driver_;
+    super.setDriver(driver);
+  }
+
+  public boolean verifyMemberBenefits() {
+    String[] banner = {"TRAVALA_MEMBERS_PAGE_HEADER_TITLE", "TRAVALA_MEMBERS_PAGE_HEADER_DESCRIPTION", "TRAVALA_MEMBERS_REGISTER_NOW_BUTTON",
+            "TRAVALA_MEMBERS_PAGE_MEMBERSHIP_BENEFITS_TITLE", "TRAVALA_MEMBERS_PAGE_MEMBERSHIP_BENEFITS_DESCRIPTION", "TRAVALA_MEMBERS_PAGE_HOW_BECOME_MEMBER_TITLE"};
+    String[] xpath = {MEMBER_BANNER_TXT, MEMBER_BANNER_CONTENT, MEMBER_BANNER_BTN, MEMBER_BENEFIT_TITLE, MEMBER_BENEFIT_CONTENT, MEMBER_BECOME_TITLE};
+    boolean b = verifyTwoListByKey(banner, xpath);
+
+    String[] benefits = {"TRAVALA_MEMBERS_PAGE_GREATER_SAVING_TITLE", "TRAVALA_MEMBERS_PAGE_GIVEBACK_REWARDS_TITLE", "TRAVALA_MEMBERS_PAGE_SMART_PROGRAM_BENEFITS_TITLE"};
+    boolean b1 = verifyListItemByListExpect(benefits, MEMBER_BENEFIT_TITLE_LIST, MEMBER_BENEFIT_TITLE_DYNAMIC);
+
+    String[] contentBenefits = {"TRAVALA_MEMBERS_PAGE_GREATER_SAVING_DES", "TRAVALA_MEMBERS_PAGE_GIVEBACK_REWARDS_DES", "TRAVALA_MEMBERS_PAGE_SMART_PROGRAM_BENEFITS_DES"};
+    boolean b2 = verifyListItemByListExpect(contentBenefits, MEMBER_BENEFIT_CONTENT_LIST, MEMBER_BENEFIT_CONTENT_DYNAMIC);
+
+    String[] extendsBenefits = {"TRAVALA_MEMBERS_PAGE_INVITE_PROGRAM_BENEFITS_TITLE", "TRAVALA_MEMBERS_PAGE_DISCOUNT_VOUCHERS_TITLE", "TRAVALA_MEMBERS_PAGE_FASTER_PAYMENT_TITLE", "TRAVALA_MEMBERS_PAGE_TRAVEL_CREDITS_TITLE"};
+    boolean b3 = verifyListItemByListExpect(extendsBenefits, MEMBER_BENEFIT_EXTEND_LIST, MEMBER_BENEFIT_EXTEND_DYNAMIC);
+
+    String[] extendsBenefitsSub = {"TRAVALA_MEMBERS_PAGE_INVITE_PROGRAM_BENEFITS_DES", "TRAVALA_MEMBERS_PAGE_DISCOUNT_VOUCHERS_DES", "TRAVALA_MEMBERS_PAGE_FASTER_PAYMENT_DES", "TRAVALA_MEMBERS_PAGE_TRAVEL_CREDITS_DES"};
+    boolean b4 = verifyListItemByListExpect(extendsBenefitsSub, MEMBER_BENEFIT_EXTEND_SUB_LIST, MEMBER_BENEFIT_EXTEND_SUB_DYNAMIC);
+
+    String[] becomeSub = {"TRAVALA_MEMBERS_PAGE_HOW_BECOME_MEMBER_METHODS_VIA_WEB_TITLE", "TRAVALA_MEMBERS_PAGE_HOW_BECOME_MEMBER_METHODS_VIA_WEB_DESC", "TRAVALA_MEMBERS_PAGE_HOW_BECOME_MEMBER_METHODS_VIA_APP_TITLE"
+            , "TRAVALA_MEMBERS_PAGE_HOW_BECOME_MEMBER_METHODS_VIA_APP_DESC", "TRAVALA_MEMBERS_PAGE_ABOUT_TRAVALA_TITLE", "TRAVALA_MEMBERS_PAGE_ABOUT_TRAVALA_DESC"};
+    boolean b5 = verifyListItemByListExpect(becomeSub, MEMBER_BECOME_SUB_LIST, MEMBER_BECOME_SUB_DYNAMIC);
+
+    status = b && b1 && b2 && b3 && b4 && b5 && verifyUrlPage(TRAVEL_MEMBER_PATH);
+    if (!status) {
+      System.out.println("Text at Travel Member Page wrong! ");
+    }
+    return status;
+  }
+
+}

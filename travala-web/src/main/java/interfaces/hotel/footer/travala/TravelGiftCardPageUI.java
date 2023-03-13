@@ -1,0 +1,41 @@
+package interfaces.hotel.footer.travala;
+
+public class TravelGiftCardPageUI {
+  public static final String TRAVEL_GIFT_CARDS_TITLE="//h1[contains(@class,'GiftCardPagePC_title')]";
+    public static final String TRAVEL_GIFT_CARDS_BANNER="//p[contains(@class,'GiftCardPagePC_bannerTitle')]";
+  public static final String TRAVEL_GIFT_CARDS_BANNER1="//p[contains(@class,'GiftCardPagePC_bannerSub')]";
+  public static final String TRAVEL_GIFT_CARD_MAIN_CONTENT="//p[contains(@class,'GiftCardPagePC_intro')]";
+  public static final String TRAVEL_GIFT_CARDS_EASY_BUY="//ul[contains(@class,'GiftCardPagePC_features')]//li[1]/h3";
+  public static final String TRAVEL_GIFT_CARDS_EASY_BUY_CONTENT="//ul[contains(@class,'GiftCardPagePC_features')]//li[1]/p";
+  public static final String TRAVEL_GIFT_CARDS_EASY_USE="//ul[contains(@class,'GiftCardPagePC_features')]//li[2]/h3";
+  public static final String TRAVEL_GIFT_CARDS_EASY_USE_CONTENT="//ul[contains(@class,'GiftCardPagePC_features')]//li[2]/p";
+  public static final String TRAVEL_GIFT_CARDS_EXPIRATION="//ul[contains(@class,'GiftCardPagePC_features')]//li[3]/h3";
+  public static final String TRAVEL_GIFT_CARDS_EXPIRATION_CONTENT="//ul[contains(@class,'GiftCardPagePC_features')]//li[3]/p";
+  public static final String TRAVEL_GIFT_CARDS_FAQ="//div[contains(@class,'GiftCardPagePC_contentWrapper')]/h2";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1="//div[contains(@class,'GiftCardPagePC_faqSection')]/h3[1]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_CONTENT1="//div[contains(@class,'GiftCardPagePC_faqSection')]/p[1]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_CONTENT2="//div[contains(@class,'GiftCardPagePC_faqSection')]/p[2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_STEP1="((//ul[contains(@class,'GiftCardPagePC_steps')])[1]/li/span)[1]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_STEP2="((//ul[contains(@class,'GiftCardPagePC_steps')])[1]/li/span)[2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_STEP3="((//ul[contains(@class,'GiftCardPagePC_steps')])[1]/li/span)[3]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_STEP4="((//ul[contains(@class,'GiftCardPagePC_steps')])[1]/li/span)[4]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION1_STEP5="((//ul[contains(@class,'GiftCardPagePC_steps')])[1]/li/span)[5]";
+  public static final String TRAVEL_GIFT_CARD_FAQ_NOTE="//div[contains(@class,'GiftCardPagePC_note')]/p";
+  public static final String TRAVEL_GIFT_CARD_NOTE1="(//div[contains(@class,'GiftCardPagePC_note')]/ul/li)[1]";
+  public static final String TRAVEL_GIFT_CARD_NOTE2="(//div[contains(@class,'GiftCardPagePC_note')]/ul/li)[2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2="//div[contains(@class,'GiftCardPagePC_faqSection')]/h3[2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_CONTENT1="//p[contains(@class,'GiftCardPagePC_info')][2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_CONTENT2="(//p[contains(@class,'GiftCardPagePC_howTo')])[2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_STEP1="((//ul[contains(@class,'GiftCardPagePC_steps')])[2]/li/span)[1]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_STEP2="((//ul[contains(@class,'GiftCardPagePC_steps')])[2]/li/span)[2]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_STEP3="((//ul[contains(@class,'GiftCardPagePC_steps')])[2]/li/span)[3]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_STEP4="((//ul[contains(@class,'GiftCardPagePC_steps')])[2]/li/span)[4]";
+  public static final String TRAVEL_GIFT_CARD_QUESTION2_CONTENT="//p[contains(@class,'GiftCardPagePC_redeemComplete')]";
+  public static final String TRAVEL_GIFT_CARD_TERM="//div[contains(@class,'GiftCardPagePC_termAndCondition')]/h3";
+  public static final String TRAVEL_GIFT_CARD_TERM_CONTENT="//div[contains(@class,'GiftCardPagePC_termAndCondition')]/p";
+  public static final String TRAVEL_GIFT_CARD_BUY_TGC_BTN="//a[contains(@class,'GiftCardPagePC_btnBuyGiftCard')]";
+  public static final String TRAVEL_GIFT_CARD_TEXT="//div[contains(@class,'GiftCardPagePC_faqSection')]/span";
+  public static final String TRAVEL_GIFT_CARD_REDEEM_LINK="//a[contains(@class,'GiftCardPagePC_redeemLink')]";
+  public static final String TRAVEL_GIFT_CARD_BUY_GIFT_CARD_LINK="//p[contains(@class,'GiftCardPagePC_info')]/strong/a";
+  public static final String TRAVEL_GIFT_CARD_TERM_LINK="//a[@href='/gift-card-terms']";
+  }
