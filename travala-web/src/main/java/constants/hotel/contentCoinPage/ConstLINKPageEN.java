@@ -1,0 +1,61 @@
+package constants.hotel.contentCoinPage;
+
+public class ConstLINKPageEN {
+        public static final String CONST_LINK_COIN_NAME ="Chainlink (LINK)";
+       public static final String CONST_LINK_BANNER_TITLE1 ="Book Accommodation with LINK";
+       public static final String CONST_LINK_BANNER_TITLE2 ="More than 2,200,000 Hotels & Accommodations ready to be purchased in LINK";
+       public static final String CONST_LINK_BANNER_TITLE_ACTIVITIES1 ="Book Tours and Activities with LINK";
+       public static final String CONST_LINK_BANNER_TITLE_ACTIVITIES2 ="More than 410,000 Activities, Tours and Experiences ready to be purchased in LINK";
+       public static final String CONST_LINK_BANNER_TITLE_FLIGHT1 ="Book Flights with LINK";
+       public static final String CONST_LINK_BANNER_TITLE_FLIGHT2 ="More than 600 Airlines ready to be purchased in LINK";
+       public static final String CONST_LINK_WHAT_IS_TITLE ="What is LINK?";
+        public static final String CONST_COIN_TEAM_SUB ="Chainlink Labs is the leading provider of secure and reliable open-source blockchain oracle solutions. They are committed to enhancing smart contracts by connecting them to a wide range of off-chain data sources and computations, such as asset prices, web APIs, IoT devices, payment systems, and more. They are dedicated to the development and integration of Chainlink as the standard decentralized oracle framework used by smart contracts across any blockchain.";
+       public static final String CONST_LINK_WHAT_IS_CONTENT ="Chainlink is a decentralized oracle network that improves smart contract interconnectivity by providing them with tamper-proof real-world inputs and outputs. Smart contracts are pre-specified agreements on the blockchain that execute automatically when certain conditions are met. ";
+       public static final String CONST_LINK_USE_CASE_CONTENT1 ="Link can be used to book over 3,000,000 travel products on Travala.com, including hotels, homes, flights, and activities. With accommodation in over 230 countries and territories, 600+ airlines, and more than 400,000 activities, Travala.com’s selection provides travellers with extensive choice when booking with LINK.";
+       public static final String CONST_LINK_USE_CASE_CONTENT2 ="Travala.com’s intuitive booking experience is designed to be familiar and simple to navigate. Travellers simply choose their desired travel product(s), enter their details, and select from the variety of available payment options, including traditional credit and debit cards, LINK, and 40+ other cryptocurrencies.";
+       public static final String CONST_LINK_USE_CASE_CONTENT3 ="Travellers are not only spoilt for choice — they’re also rewarded for bookings. All travel bookings made with LINK automatically receive up to 3% discount on the total booking price, as well as up to 2% giveback in AVA.";
+
+       public static final String CONST_LINK_MORE_USE_CASE_CONTENT1 ="Smart contracts are self-enforcing contracts, written in code and executed by the blockchain. They’re great at simple tasks like basic calculations and sending and receiving money. However, they’re largely limited beyond this. Hybrid contracts are capable of advanced forms of economic and social coordination that have the tamper-proof and immutable properties of blockchains. They also leverage off-chain oracle services in order to attain scalability, confidentiality, order fairness, and connectivity to any real-world data source or system.";
+       public static final String CONST_LINK_MORE_USE_CASE_CONTENT2 ="Chainlink’s pooled staking app provides users with a curated list of professionally managed nodes and pools. By staking, you earn rewards by allocating your LINK tokens to Chainlink nodes, where they can be used as collateral. Your rewards accrue automatically, and you can claim them whenever you want. You retain full control of your tokens, powered by trustless pooling contracts. Smart contracts ensure tamper-proof delivery from wallet to nodes. ";
+       public static final String CONST_LINK_MORE_USE_CASE_CONTENT3 ="An NFT is a non-fungible token that represents ownership of something unique. Chainlink’s oracle network allows NFTs to use external data and systems as a mechanism for minting and burning NFTs, trading peer-to-peer, and checking state. By using multiple independent oracles to aggregate and verify data from multiple sources, Chainlink’s oracle framework allows users to source and deliver data without a single point of failure.";
+
+       public static final String CONST_LINK_TEAM_ITEM_TITLE1 ="Sergey Nazarov";
+       public static final String CONST_LINK_TEAM_ITEM_TITLE2 ="Niki Ariyasinghe";
+       public static final String CONST_LINK_TEAM_ITEM_TITLE3 ="Melodi Gökçe Kaya";
+       public static final String CONST_LINK_TEAM_ITEM_TITLE4 ="Evangelos Barakos";
+       public static final String CONST_LINK_TEAM_ITEM_TITLE5 ="Zayi Reyes ";
+       public static final String CONST_LINK_TEAM_ITEM_TITLE6 ="Daniel Kochis";
+       public static final String CONST_LINK_TEAM_ITEM_TITLE7 ="Harry Papacharissiou";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION1 ="CoFounder of Chainlink Labs";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION2 ="Head of Business Development";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION3 ="Head of Developer Marketing & Community";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION4 ="Blockchain Integration Engineer ";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION5 ="Ecosystem Marketing Strategist";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION6 ="Head of Partnerships";
+       public static final String CONST_LINK_TEAM_ITEM_POSITION7 ="Developer Advocate / Software Engineer";
+       public static final String CONST_LINK_TEAM_ITEM_DES1 ="Sergey Nazarov is a Russian online entrepreneur most commonly known as the co-founder of the Chainlink and SmartContract. He began his career building peer-to-peer marketplaces before jumping ship to cryptocurrency in 2011. Nazarov believes it has the ability to change the way societies distribute wealth, enforce contracts, and share critical information with their citizens.";
+       public static final String CONST_LINK_TEAM_ITEM_DES2 ="Niki is a startup leader passionate about the new frontier of blockchain in global business.";
+       public static final String CONST_LINK_TEAM_ITEM_DES3 ="Energetic self-starter with experience in business development, corporate development, strategic partnerships, account relationship management, and product management.";
+       public static final String CONST_LINK_TEAM_ITEM_DES4 ="I work on strengthening the relationships among communities, customers and partners, and streamlining the collaboration. With 9+ years in both public and private sectors, I have experience in program management, advocacy, developer ecosystem, strategic outreach, community and partner relations.";
+       public static final String CONST_LINK_TEAM_ITEM_DES5 ="Ambitious software engineer, data scientist and blockchain enthusiast.";
+       public static final String CONST_LINK_TEAM_ITEM_DES6 ="The daughter of immigrants, I believe that blockchain technology creates opportunities for underrepresented communities. Working in hands on, innovative tech environments has taught me to be a leader and push myself to find continuous growth!";
+       public static final String CONST_LINK_TEAM_ITEM_DES7 ="Senior Technical Consultant with 15 years IT and consulting experience, specializing in systems integration. Distributed Ledger/Blockchain Technology architect, developer and enthusiast. Working on helping to build Chainlink.";
+       public static final String CONST_LINK_MISSION_CONTENT ="Through a fusion of principled academic research and an industry focus on user needs, Chainlink’s mission is to enable the next generation of smart contracts and usher in a new age of economic fairness, transparency, and efficiency.";
+       public static final String CONST_LINK_CONTENT2 ="Not traveling anytime soon? No problem! The use cases of LINK extend beyond the Travala.com platform";
+       public static final String CONST_LINK_HOW_TO_PAY1 ="Visit Travala.com and search for a hotel, home, flight, or other travel product by entering your destination and dates.";
+       public static final String CONST_LINK_HOW_TO_PAY2 ="Select your desired choice from the available options.";
+       public static final String CONST_LINK_HOW_TO_PAY3 ="Enter the required traveller details.";
+       public static final String CONST_LINK_HOW_TO_PAY4 ="Select Crypto as your payment method, then select LINK.";
+       public static final String CONST_LINK_HOW_TO_PAY5 ="Click Complete Reservation. In your LINK wallet, input the generated address by scanning the provided QR code or by copying the text. Ensure that the exact LINK amount is entered and send the payment.";
+       public static final String CONST_LINK_HOW_TO_PAY6 ="Click Payment sent. Your transaction will be processed and you will receive a confirmation email once your voucher or e-ticket is available.";
+        public static final String CONST_COIN_TRADE_SUB ="Exchanges and partners where you can buy, sell and trade LINK:";
+        public static final String CONST_COIN_STORE_SUB ="Store your LINK securely with the following wallets:";
+       public static final String CONST_LINK_FAQ_CONTENT1 ="Chainlink is one of the first networks to allow the integration of off-chain data into smart contracts through its Decentralised Oracle Network. ";
+       public static final String CONST_LINK_FAQ_CONTENT2 ="Off-chain data, also known as real-world data, refers to the current global data infrastructure that exists outside of the blockchain. This data must be brought on-chain via oracles to be used by smart contract applications. Off chain data includes data providers, web APIs, enterprise backends, cloud providers, IoT devices, e-signatures, payment systems, other blockchains, and more.";
+       public static final String CONST_LINK_FAQ_CONTENT3 ="Bridging the connection between the blockchain (on-chain) and the outside world (off-chain) requires an additional and separate piece of infrastructure known as an oracle. An oracle is a secure piece of middleware that facilitates this communication. Through Oracle, smart contracts are far more versatile, as they have access to the off-chain data many real-world contracts require. ";
+       public static final String CONST_LINK_FAQ_CONTENT4 ="The Chainlink ecosystem includes hundreds of dApps, node operators, blockchains, and data providers. It also has an extensive open-source development and research community. The Chainlink Network powers many leading DeFi applications, securing billions of dollars in user funds. As Chainlink is a permissionless framework, anybody can join the network at any time and contribute to the growing ecosystem.";
+       public static final String CONST_LINK_FAQ_TITLE1 ="What Makes Chainlink Unique?";
+       public static final String CONST_LINK_FAQ_TITLE2 ="What is Off-Chain Data?";
+       public static final String CONST_LINK_FAQ_TITLE3 ="What is a Blockchain Oracle?";
+       public static final String CONST_LINK_FAQ_TITLE4 ="What is the Chainlink Network?";
+}
