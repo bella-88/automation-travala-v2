@@ -165,7 +165,7 @@ String getIconCoin = null;
 
   @When("^I click on payment options button and verify list token with \"([^\"]*)\" on that page$")
   public void iClickOnPaymentOptionsButtonAndVerifyListTokenWithOnThatPage(String coin) throws Throwable {
-//    registerPage.closeSignUpJourneyPopUp();
+    registerPage.closeSignUpJourneyPopUp();
     scrollToBottomPage(driver);
     clickToElement(driver, PAYMENT_OPTION_BTN);
     switchToWindowByUrlContainsString(driver, PAYMENT_OPTIONS_PATH);

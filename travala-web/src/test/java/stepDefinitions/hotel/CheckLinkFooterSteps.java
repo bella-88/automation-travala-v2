@@ -2,7 +2,6 @@ package stepDefinitions.hotel;
 
 import commons.hotel.CommonHotelPages;
 import cucumber.api.java.en.And;
-
 import cucumberOptions.HooksHotel;
 import org.openqa.selenium.WebDriver;
 import pages.hotel.LandingPage;

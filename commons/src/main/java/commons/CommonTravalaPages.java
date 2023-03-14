@@ -1,6 +1,7 @@
 package commons;
 
 import com.github.javafaker.Faker;
+import configs.ReaderConfigLanguage;
 import enumerable.Env;
 import enumerable.Flag;
 import org.apache.commons.lang.StringUtils;
@@ -53,9 +54,7 @@ public class CommonTravalaPages extends AbstractPage {
     String flag = Flag.valueOf(GET_LANGUAGE).getFlg();
     return flag;
   }
-public String getTextFromReadFile(String code){
-return   getTextFromReadFile(code);
-}
+
   //========================VERRIFY SCRIPT GA ON THE PAGE=================================
   public boolean verifyScriptGA(WebDriver driver) {
     String pageSource = driver.getPageSource();
@@ -318,7 +317,7 @@ return   getTextFromReadFile(code);
   public List<String> addListExpectByKey(String[] content) {
     List<String> expect = new ArrayList<>();
     for (int i = 0; i < content.length; i++) {
-      expect.add(getTextFromReadFile(content[i]).trim());
+      expect.add(ReaderConfigLanguage.getStringLanguage(content[i]).trim());
     }
     return expect;
   }
@@ -393,7 +392,7 @@ return   getTextFromReadFile(code);
   public String[] addListExpectAfterFormatFromKey(String[] expectContent, String coinName) {
     String[] content = expectContent;
     for (int i = 0; i < content.length; i++) {
-      content[i] = getTextFromReadFile(content[i]).replaceAll("%s", coinName);
+      content[i] = ReaderConfigLanguage.getStringLanguage(content[i]).replaceAll("%s", coinName);
 //      System.out.println("code: "+ content[i]);
 //      System.out.println("content: "+ getTextFromReadFile(content[i]).replaceAll("%s",coinName));
     }

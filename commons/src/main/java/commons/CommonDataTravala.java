@@ -52,6 +52,7 @@ public static final int HIGHLIGHT_ELEMENT_TIMEOUT_FOR_DEMO = 100;
   public static final String WALLET_BUSD = "BUSD";
   public static final String INVALID_SEARCH_CURRENCY = "ADCAAAAAAAA";
   public static final int LONG_TIMEOUT = 30;
+  public static final int LONG_TIMEOUT_ADJUST = 20;
 
   //=========================BOOKING STATUS==========================================
   public static final String BOOKING_STATUS_PROCESS = "Processing";

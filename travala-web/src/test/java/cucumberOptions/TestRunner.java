@@ -24,6 +24,7 @@ import org.junit.runner.RunWith;
 //  tags = {"      @Property"}
 //  tags = {"@footer"}
   tags = {"@payment"}
+//  tags = {"@BuyTravelCredit"}
 //  tags = {"      @Search"}
 //  tags = {"@landing"}
 //  tags = {"          @nft, @Footer, @BuyGifGCard,  @BuyTravelCredit"}

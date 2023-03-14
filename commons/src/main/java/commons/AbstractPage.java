@@ -20,8 +20,7 @@ import java.util.NoSuchElementException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static commons.CommonDataTravala.HIGHLIGHT_ELEMENT_TIMEOUT_FOR_DEMO;
-import static commons.CommonDataTravala.LONG_TIMEOUT;
+import static commons.CommonDataTravala.*;
 
 public class AbstractPage {
   WebElement element;
@@ -145,7 +144,7 @@ public class AbstractPage {
 
   public void clickToElement(WebDriver driver, String locator) {
     highlightElement(driver, locator);
-    WebDriverWait wait = new WebDriverWait(driver, 60);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     if(element.isEnabled()) {
       element.click();
@@ -164,7 +163,7 @@ public class AbstractPage {
   public void clickToElementByDynamicLocatorWithJS(WebDriver driver, String locator, String value) {
     locator = String.format(locator, value);
     highlightElement(driver, locator);
-    WebDriverWait wait = new WebDriverWait(driver, 10);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     javascriptExecutor = (JavascriptExecutor) driver;
     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     javascriptExecutor.executeScript("arguments[0].click();", element);
@@ -181,7 +180,7 @@ public class AbstractPage {
   public void sendKeysToElementByJavascript(WebDriver driver, String locator, String value) {
     locator = String.format(locator, value);
     highlightElement(driver, locator);
-    WebDriverWait wait = new WebDriverWait(driver, 5);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     javascriptExecutor = (JavascriptExecutor) driver;
     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     javascriptExecutor.executeScript("arguments[0].value='" + value + "'", element);
@@ -471,23 +470,23 @@ public class AbstractPage {
   }
 
   public void waitForAllElementsPresence(WebDriver driver, String locator) {
-    waitExplicit = new WebDriverWait(driver, LONG_TIMEOUT);
+    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT,LONG_TIMEOUT_ADJUST));
     byLocator = By.xpath(locator);
     waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byLocator));
   }
 
   public void waitElementToBeClickAble(WebDriver driver, String locator) {
     WebElement element = driver.findElement(By.xpath(locator));
-    element = new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(element));
+    element = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT)).until(ExpectedConditions.elementToBeClickable(element));
   }
 
   public void waitElement(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT,LONG_TIMEOUT_ADJUST));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
   }
 
   public void waitForAllElementsPresenceById(WebDriver driver, String locator) {
-    waitExplicit = new WebDriverWait(driver, LONG_TIMEOUT);
+    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     byLocator = By.id(locator);
     waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byLocator));
   }
@@ -495,27 +494,27 @@ public class AbstractPage {
   public void waitForElementVisible(WebDriver driver, String locator, String value) {
     locator = String.format(locator, value);
     WebElement element = driver.findElement(By.xpath(locator));
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
   }
 
   public void waitForElementClickable(WebDriver driver, String locator) {
     WebElement element = driver.findElement(By.xpath(locator));
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
   }
 
   public void waitFoElementInvisible(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, 50);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
   }
 
   public void waitFoElementVisible(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     wait2sTime();
   }
 
   public void waitFoElementClickable(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     try {
       Thread.sleep(1000);
@@ -525,7 +524,7 @@ public class AbstractPage {
   }
 
   public void waitForAlertPresence(WebDriver driver) {
-    waitExplicit = new WebDriverWait(driver, LONG_TIMEOUT);
+    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     waitExplicit.until(ExpectedConditions.alertIsPresent());
   }
 
@@ -665,7 +664,7 @@ public class AbstractPage {
 
   //======================================ALERT POPUP===========================================================
   public void acceptAlert(WebDriver driver) {
-    WebDriverWait wait = new WebDriverWait(driver, 1);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
     wait.until(ExpectedConditions.alertIsPresent());
     Alert alert = driver.switchTo().alert();
     alert.accept();
@@ -710,7 +709,9 @@ public class AbstractPage {
     return segments[position];
   }
 
-
+  public String getTextFromReadFile(String code){
+    return ReaderConfigLanguage.getStringLanguage(code);
+  }
   public String getTextAnyAlert(WebDriver driver) {
     waitForAlertPresence(driver);
     return getTextAlert(driver);

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-//import static commons.TRAVALA_LIVE_URL;
+import static commons.CommonTravalaURL.TRAVALA_LIVE_URL;
 
 public class HooksHotel {
   //Run for many thread
@@ -35,6 +35,8 @@ public class HooksHotel {
       chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
       chromeOptions.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
       chromeOptions.setExperimentalOption("useAutomationExtension", false);
+      chromeOptions.addArguments("--remote-allow-origins=*");
+
       chromeOptions.addArguments("--no-sandbox");
       if(System.getProperty("os.name").startsWith("Linux")) {
           chromeOptions.addArguments("--headless"); //!!!should be enabled for Jenkins
@@ -44,7 +46,6 @@ public class HooksHotel {
       Map<String, Object> prefs = new HashMap<String, Object>();
       prefs.put("credentials_enable_service", false);
       prefs.put("profile.password_manager_enabled", false);
-
       chromeOptions.setExperimentalOption("prefs", prefs);
 //    chromeOptions.setExperimentalOption("useAutomationExtension", false);
 //    chromeOptions.addArguments("disable-extensions");
@@ -70,9 +71,7 @@ public class HooksHotel {
           Runtime.getRuntime().addShutdownHook(new Thread(new BrowserCleanupTravala()));
         }
         driver.manage().deleteAllCookies();
-//        driver.get(TRAVALA_LIVE_URL);
-        driver.get("https://www.travala.com/");
-//        driver.get("https://travala-pr-255.herokuapp.com/?utm_source=ig");
+        driver.get(TRAVALA_LIVE_URL);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(55, TimeUnit.SECONDS);
         LOGGER.info("===============STARTED THE BROWSER TRAVALA =====================");

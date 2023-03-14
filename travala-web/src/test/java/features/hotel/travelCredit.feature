@@ -1,6 +1,6 @@
-@BuyTravelCredit
-Feature: Verify Function Buy Travel Credit
 
+Feature: Verify Function Buy Travel Credit
+  @BuyTravelCredit
   Scenario: I verify text on the Travel Credit page
     When I login to system by travala email
     When I navigate to My Travel Credit page

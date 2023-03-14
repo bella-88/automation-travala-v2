@@ -1,9 +1,9 @@
-@footer
+
 Feature: Verify text display on the pages at the footer part
 
 #  Scenario: Verify display link on the footer
 #    And I verify display item on the footer part
-
+  @footer
   Scenario: Verify NAVIGATE and CONTENT on the pages at TRAVALA
     And I click on about us link and verify displayed text on this page
     And I verify displayed text on Travelsmart Protection page
