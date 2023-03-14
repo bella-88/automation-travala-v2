@@ -445,16 +445,16 @@ public class HomePage extends CommonHotelPages {
 
   }
 
-//  public List<String> getListPropertySuggestionInSearchBox(String text) {
-//    List<String> listPropertySuggestion = new ArrayList<>();
-//    clickToElement(driver, SEARCH_HOTEL_TEXTBOX_FIRST);
-//    WebElement search = driver.findElement(By.xpath(SEARCH_HOTEL_TEXTBOX_FIRST));
-//    search.sendKeys(text);
-//    List<WebElement> elements = driver.findElements(By.xpath(LIST_PROPERTIES_SUGGESTION));
-//    for (WebElement element : elements) {
-//      listPropertySuggestion.add(element.getText().replaceAll("\n", ""));
-//    }
-//    return listPropertySuggestion;
-//  }
+  public List<String> getListPropertySuggestionInSearchBox(String text) {
+    List<String> listPropertySuggestion = new ArrayList<>();
+    clickToElement(driver, SEARCH_HOTEL_TEXTBOX_FIRST);
+    WebElement search = driver.findElement(By.xpath(SEARCH_HOTEL_TEXTBOX_FIRST));
+    search.sendKeys(text);
+    List<WebElement> elements = driver.findElements(By.xpath(LIST_PROPERTIES_SUGGESTION));
+    for (WebElement element : elements) {
+      listPropertySuggestion.add(element.getText().replaceAll("\n", ""));
+    }
+    return listPropertySuggestion;
+  }
 
 }

@@ -134,4 +134,7 @@ public class CommonsTravalaXpath {
   public static final String INVALID_MESSAGE = "//div[@role='alert']";
   public static final String NOTE_CREDIT_CARD_TXT = "//p[contains(@class,'CreditCard_stripMsg')]";
   public static final String CARD_NUMBER_LABEL = "//label[contains(@class,'CreditCard_cardNumberLabel')]";
+
+  public static final String LIST_PROPERTIES_SUGGESTION = "//li[contains(@class,'TvlSearchBoxPC_property')]/span[not(@class)]";
+
 }

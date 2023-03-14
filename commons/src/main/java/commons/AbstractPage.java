@@ -749,7 +749,7 @@ public class AbstractPage {
     return todayStr;
   }
 
-  public String getDatePlus(int datePlus, String formatDate) {
+  public static String getDatePlus(int datePlus, String formatDate) {
     DateFormat dateFormat = new SimpleDateFormat(formatDate);
     Calendar calendar = Calendar.getInstance();
     calendar.setTime(new Date());

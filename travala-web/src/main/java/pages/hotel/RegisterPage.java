@@ -2,6 +2,7 @@ package pages.hotel;
 
 import com.mashape.unirest.http.exceptions.UnirestException;
 //import interfaces.LoginRegisterJourneyPageUI;
+import interfaces.hotel.LoginRegisterJourneyPageUI;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -150,16 +151,16 @@ public class RegisterPage extends CommonHotelPages {
 //    }
 //  }
 //
-//  public void closeSignUpJourneyPopUp() {
-//    int maxtimeDisplayPopUp = 30;
-//    for(int i=0; i < maxtimeDisplayPopUp/5; i++) {
-//      if(!isElementDisplayed(driver, LoginRegisterJourneyPageUI.LOGIN_OR_SIGNUP_JOURNEY_POP_UP)) {
-//        System.out.println("Sign up journey pop up is not displayed in time " + (i+1)*5);
-//      } else {
-//        clickToElement(driver, LoginRegisterJourneyPageUI.CLOSE_BUTTON_ON_SIGN_UP_JOURNEY_POP_UP);
-//        break;
-//      }
-//    }
-//  }
+  public void closeSignUpJourneyPopUp() {
+    int maxtimeDisplayPopUp = 30;
+    for(int i=0; i < maxtimeDisplayPopUp/5; i++) {
+      if(!isElementDisplayed(driver, LoginRegisterJourneyPageUI.LOGIN_OR_SIGNUP_JOURNEY_POP_UP)) {
+        System.out.println("Sign up journey pop up is not displayed in time " + (i+1)*5);
+      } else {
+        clickToElement(driver, LoginRegisterJourneyPageUI.CLOSE_BUTTON_ON_SIGN_UP_JOURNEY_POP_UP);
+        break;
+      }
+    }
+  }
 
 }
