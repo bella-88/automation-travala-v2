@@ -29,7 +29,7 @@ Feature: Verify text display on LANDING PAGE
     Examples:
       | email                   |
       | bella.travala@gmail.com |
-
+  @landing
   Scenario: Verify LANGUAGE displayed when input invalid textbox on REGISTER page
     When I click on Register link and verify displayed text on this page
     And I input empty the textbox on this form and verify error message on this form

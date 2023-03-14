@@ -42,7 +42,6 @@ public static final int HIGHLIGHT_ELEMENT_TIMEOUT_FOR_DEMO = 100;
   public static final String EXCELLENT_EXPECT_TEXT = "Excellent";
   public static final String PAY_AT_PROPERTY_EXPECT_TEXT = "Pay at property";
 
-  public static final int LONG_TIMEOUT = 30;
 
   //=========================BOOKING STATUS==========================================
   public static final String BOOKING_STATUS_PROCESS = "Processing";

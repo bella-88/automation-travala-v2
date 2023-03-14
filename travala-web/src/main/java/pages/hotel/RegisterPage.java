@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 //import pages.hotel.mailsac.MailsacService;
 
 import commons.hotel.CommonHotelPages;
+import pages.mailsac.MailsacService;
 
 import static commons.CommonsTravalaXpath.*;
 import static interfaces.hotel.LandingPageUI.*;
@@ -58,7 +59,7 @@ public class RegisterPage extends CommonHotelPages {
   }
 
   public void verifyErrorMessageRegister() {
-//    clickToElementByJavascript(driver, FIRST_NAME_TXT);
+    clickToElementByJavascript(driver, FIRST_NAME_TXT);
     sendkeysToElement(driver, FIRST_NAME_TXT, "");
     clickToElementByJavascript(driver, FIRST_NAME_TITLE);
     wait2sTime();
@@ -95,38 +96,38 @@ public class RegisterPage extends CommonHotelPages {
     }
   }
 
-//  public void doRegisterJourney(String email, String password) throws UnirestException {
-//    MailsacService mailsacAPIPage = new MailsacService();
-//    sendkeysToElement(driver, LoginRegisterJourneyPageUI.EMAIL_TEXTBOX_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP, email);
-//    clickToElement(driver, LoginRegisterJourneyPageUI.CONTINUE_BUTTON_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP);
-//
-//    sendkeysToElement(driver, LoginRegisterJourneyPageUI.PASSWORD_TEXTBOX_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP, password);
+  public void doRegisterJourney(String email, String password) throws UnirestException {
+    MailsacService mailsacAPIPage = new MailsacService();
+    sendkeysToElement(driver, LoginRegisterJourneyPageUI.EMAIL_TEXTBOX_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP, email);
+    clickToElement(driver, LoginRegisterJourneyPageUI.CONTINUE_BUTTON_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP);
+
+    sendkeysToElement(driver, LoginRegisterJourneyPageUI.PASSWORD_TEXTBOX_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP, password);
 //    verifyConditionPassword(driver);
-//    clickToElement(driver, LoginRegisterJourneyPageUI.CONTINUE_BUTTON_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP);
-//
-//    wait5sTime();
-//    String verificationCode = mailsacAPIPage.getVerificationCodeInMailsacInbox(email);
-//    wait1sTime();
-//    sendkeysToElement(driver, LoginRegisterJourneyPageUI.VERIFICATION_CODE_TEXTBOX, verificationCode);
-//    clickToElement(driver, LoginRegisterJourneyPageUI.SUBMIT_BUTTON);
-//    clickToElement(driver, LoginRegisterJourneyPageUI.OK_BUTTON_AT_REGISTER_SUCCESS_POP_UP);
-//    System.out.println("Signup success! Email/Password: " + email + "/" + password);
-//  }
-//
-//  public void verifyLoginRegisterJourneyPopUpDisplayed(String utm_campaign, String utm_term, String camp_voucher_discount, String camp_credit) {
-//      Assert.assertTrue(isElementDisplayed(driver, LoginRegisterJourneyPageUI.LOGIN_OR_SIGNUP_JOURNEY_POP_UP));
-//      switch (utm_term) {
-//        case "discount":
-//          verifyUIRegisterJourneyWithDiscountTermPopUp(utm_campaign);
-//          break;
-//        case "credit":
-//          verifyUIRegisterJourneyWithCreditTermPopUp();
-//          break;
-//        default:
-//          Assert.assertTrue(isElementDisplayed(driver, ""));
-//          break;
-//      }
-//  }
+    clickToElement(driver, LoginRegisterJourneyPageUI.CONTINUE_BUTTON_AT_LOGIN_OR_SIGNUP_JOURNEY_POP_UP);
+
+    wait5sTime();
+    String verificationCode = mailsacAPIPage.getVerificationCodeInMailsacInbox(email);
+    wait1sTime();
+    sendkeysToElement(driver, LoginRegisterJourneyPageUI.VERIFICATION_CODE_TEXTBOX, verificationCode);
+    clickToElement(driver, LoginRegisterJourneyPageUI.SUBMIT_BUTTON);
+    clickToElement(driver, LoginRegisterJourneyPageUI.OK_BUTTON_AT_REGISTER_SUCCESS_POP_UP);
+    System.out.println("Signup success! Email/Password: " + email + "/" + password);
+  }
+
+  public void verifyLoginRegisterJourneyPopUpDisplayed(String utm_campaign, String utm_term, String camp_voucher_discount, String camp_credit) {
+      Assert.assertTrue(isElementDisplayed(driver, LoginRegisterJourneyPageUI.LOGIN_OR_SIGNUP_JOURNEY_POP_UP));
+      switch (utm_term) {
+        case "discount":
+          verifyUIRegisterJourneyWithDiscountTermPopUp(utm_campaign);
+          break;
+        case "credit":
+          verifyUIRegisterJourneyWithCreditTermPopUp();
+          break;
+        default:
+          Assert.assertTrue(isElementDisplayed(driver, ""));
+          break;
+      }
+  }
 
   private void verifyUIRegisterJourneyWithDiscountTermPopUp(String utm_campaign) {
     Assert.assertTrue(isElementDisplayed(driver, ""));

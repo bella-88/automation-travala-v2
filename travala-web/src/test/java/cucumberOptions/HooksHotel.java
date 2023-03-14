@@ -10,11 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.UnreachableBrowserException;
 
+import java.time.Duration;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static commons.CommonDataTravala.LONG_TIMEOUT;
 import static commons.CommonTravalaURL.TRAVALA_LIVE_URL;
 
 public class HooksHotel {
@@ -73,7 +75,7 @@ public class HooksHotel {
         driver.manage().deleteAllCookies();
         driver.get(TRAVALA_LIVE_URL);
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(55, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(LONG_TIMEOUT));
         LOGGER.info("===============STARTED THE BROWSER TRAVALA =====================");
       }
       return driver;

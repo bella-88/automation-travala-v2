@@ -22,8 +22,8 @@ import org.junit.runner.RunWith;
 //  tags = {"@TRAVO-15348"}
 //  tags = {"     @CheckOut"}
 //  tags = {"      @Property"}
-//  tags = {"@footer"}
-  tags = {"@payment"}
+  tags = {"@footer"}
+//  tags = {"@payment"}
 //  tags = {"@BuyTravelCredit"}
 //  tags = {"      @Search"}
 //  tags = {"@landing"}

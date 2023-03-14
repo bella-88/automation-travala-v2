@@ -1,4 +1,5 @@
 package commons;
+
 import configs.ReaderConfigLanguage;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -98,6 +99,7 @@ public class AbstractPage {
   public void scrollToTopPage(WebDriver driver) {
     ((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
   }
+
   public void scrollToLoadMore(WebDriver driver) {
     try {
       long lastHeight = (long) ((JavascriptExecutor) driver).executeScript("return document.body.scrollHeight");
@@ -144,9 +146,9 @@ public class AbstractPage {
 
   public void clickToElement(WebDriver driver, String locator) {
     highlightElement(driver, locator);
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-    if(element.isEnabled()) {
+    if (element.isEnabled()) {
       element.click();
     }
     wait300Time();
@@ -163,7 +165,7 @@ public class AbstractPage {
   public void clickToElementByDynamicLocatorWithJS(WebDriver driver, String locator, String value) {
     locator = String.format(locator, value);
     highlightElement(driver, locator);
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     javascriptExecutor = (JavascriptExecutor) driver;
     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     javascriptExecutor.executeScript("arguments[0].click();", element);
@@ -180,7 +182,7 @@ public class AbstractPage {
   public void sendKeysToElementByJavascript(WebDriver driver, String locator, String value) {
     locator = String.format(locator, value);
     highlightElement(driver, locator);
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     javascriptExecutor = (JavascriptExecutor) driver;
     WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     javascriptExecutor.executeScript("arguments[0].value='" + value + "'", element);
@@ -470,7 +472,7 @@ public class AbstractPage {
   }
 
   public void waitForAllElementsPresence(WebDriver driver, String locator) {
-    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT,LONG_TIMEOUT_ADJUST));
+    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT, LONG_TIMEOUT_ADJUST));
     byLocator = By.xpath(locator);
     waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byLocator));
   }
@@ -481,12 +483,12 @@ public class AbstractPage {
   }
 
   public void waitElement(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT,LONG_TIMEOUT_ADJUST));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT, LONG_TIMEOUT_ADJUST));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
   }
 
   public void waitForAllElementsPresenceById(WebDriver driver, String locator) {
-    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     byLocator = By.id(locator);
     waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byLocator));
   }
@@ -494,27 +496,27 @@ public class AbstractPage {
   public void waitForElementVisible(WebDriver driver, String locator, String value) {
     locator = String.format(locator, value);
     WebElement element = driver.findElement(By.xpath(locator));
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
   }
 
   public void waitForElementClickable(WebDriver driver, String locator) {
     WebElement element = driver.findElement(By.xpath(locator));
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
   }
 
   public void waitFoElementInvisible(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(locator)));
   }
 
   public void waitFoElementVisible(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
     wait2sTime();
   }
 
   public void waitFoElementClickable(WebDriver driver, String locator) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
     try {
       Thread.sleep(1000);
@@ -524,7 +526,7 @@ public class AbstractPage {
   }
 
   public void waitForAlertPresence(WebDriver driver) {
-    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     waitExplicit.until(ExpectedConditions.alertIsPresent());
   }
 
@@ -664,7 +666,7 @@ public class AbstractPage {
 
   //======================================ALERT POPUP===========================================================
   public void acceptAlert(WebDriver driver) {
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds( LONG_TIMEOUT));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     wait.until(ExpectedConditions.alertIsPresent());
     Alert alert = driver.switchTo().alert();
     alert.accept();
@@ -709,9 +711,10 @@ public class AbstractPage {
     return segments[position];
   }
 
-  public String getTextFromReadFile(String code){
+  public String getTextFromReadFile(String code) {
     return ReaderConfigLanguage.getStringLanguage(code);
   }
+
   public String getTextAnyAlert(WebDriver driver) {
     waitForAlertPresence(driver);
     return getTextAlert(driver);
@@ -916,40 +919,43 @@ public class AbstractPage {
     return Integer.parseInt(sb.toString());
   }
 
-  public String randomDestination(){
-     String[] SEARCH_DESTINATION={ "Paris", "Jakarta", "Amsterdam", "Shanghai", "GUANGZHOU", "BEIJING",
-       "ha noi", "lon don", "ho chi minh", "hongkong", "sydney"};
-     Random random = new Random();
-    String str = SEARCH_DESTINATION[random.nextInt(11)];
-    System.out.println("======Search Result For Destination: "+str+ " =====" );
-     return str;
-  }
-
-  public String randomCountry(){
-    String[] SEARCH_COUNTRY={ "CHINA", "Thailand", "Australia", "Vietnam", "USK"};
+  public String randomDestination() {
+    String[] SEARCH_DESTINATION = {"Paris", "Jakarta", "Amsterdam", "Shanghai", "GUANGZHOU", "BEIJING",
+      "ha noi", "lon don", "ho chi minh", "hongkong", "sydney"};
     Random random = new Random();
-    String str = SEARCH_COUNTRY[random.nextInt(5)];
-    System.out.println("======Search Result For Country: "+str+ " =====" );
+    String str = SEARCH_DESTINATION[random.nextInt(11)];
+    System.out.println("======Search Result For Destination: " + str + " =====");
     return str;
   }
-  public String randomCrypto(){
-    String[] Crypto= {" AVA", " BTC", " ETH", " USDT", " USDC", " BNB", " XRP", " BUSD", " SOL", " ADA", " DOGE", " DOT", " TRX",
+
+  public String randomCountry() {
+    String[] SEARCH_COUNTRY = {"CHINA", "Thailand", "Australia", "Vietnam", "USK"};
+    Random random = new Random();
+    String str = SEARCH_COUNTRY[random.nextInt(5)];
+    System.out.println("======Search Result For Country: " + str + " =====");
+    return str;
+  }
+
+  public String randomCrypto() {
+    String[] Crypto = {" AVA", " BTC", " ETH", " USDT", " USDC", " BNB", " XRP", " BUSD", " SOL", " ADA", " DOGE", " DOT", " TRX",
       " DAI", " SHIB", " LTC", " NEAR", " FTT", " BCH", " LINK", " XLM", " XMR", " VET", " EGLD", " HBAR", " FIL", " XTZ", " MANA", " EOS", " TUSD", " CAKE",
       " USDP", " WAVES", " BAT", " FTM", " ZIL", " DASH", " CHZ", " XDC", " ONE", " GALA", " XEM", " QTUM", " GT ", " GUSD", " IOTX", " ILV", " SXP", " VLX",
       " DGB", " NANO", " MX ", " DAO", " OCEAN", " XYO", " FUN", " CHR", " CTSI", " SUPER", " KLV", " STPT", " STRAX", " XVG", " ARK", " BIFI", " ARPA",
       " SFUND", " TKO", " GRS", " KMD", " OM ", " FIRO", " FRONT", " NWC", " BEL", " LGCY", " POOLZ", " NFTB", " VIB", " XCUR", " KISHU", " NTVRK", " TRVL"};
     Random random = new Random();
     String str = Crypto[random.nextInt(60)].trim();
-    System.out.println("======Payment by Crypto with: "+str+ " =====" );
+    System.out.println("======Payment by Crypto with: " + str + " =====");
     return str;
   }
-  public String randomWallet(){
-    String[] Wallet={ "AVA", "BNB", "BUSD"};
+
+  public String randomWallet() {
+    String[] Wallet = {"AVA", "BNB", "BUSD"};
     Random random = new Random();
     String str = Wallet[random.nextInt(3)];
-    System.out.println("======Payment by Wallet with: "+str+ " =====" );
+    System.out.println("======Payment by Wallet with: " + str + " =====");
     return str;
   }
+
   public String randomEmail() {
     String randomEmail = "bella" + randomNumber() + "@travala.com";
     return randomEmail;
@@ -1063,8 +1069,8 @@ public class AbstractPage {
   public String toAlternativeString(String string) {
     String text = "";
     String[] arrText = string.split("");
-    for (int i=0; i < arrText.length; i++) {
-      if(i%2==0) {
+    for (int i = 0; i < arrText.length; i++) {
+      if (i % 2 == 0) {
         text += arrText[i].toUpperCase();
       } else {
         text += arrText[i].toLowerCase();
