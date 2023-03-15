@@ -24,10 +24,10 @@ import java.util.regex.Pattern;
 import static commons.CommonDataTravala.*;
 
 public class AbstractPage {
-  WebElement element;
+  WebElement element = null;
   List<WebElement> elements;
   JavascriptExecutor javascriptExecutor;
-  WebDriverWait waitExplicit;
+  //  WebDriverWait waitExplicit;
   By byLocator;
   Set<String> allWindows;
   boolean status;
@@ -190,9 +190,9 @@ public class AbstractPage {
   }
 
   public void clickToElementByJavascript(WebDriver driver, String locator) {
-    waitForAllElementsPresence(driver, locator);
+//    waitForAllElementsPresence(driver, locator);
     javascriptExecutor = (JavascriptExecutor) driver;
-    WebElement element = driver.findElement(By.xpath(locator));
+     element = driver.findElement(By.xpath(locator));
     javascriptExecutor.executeScript("arguments[0].click();", element);
   }
 
@@ -472,7 +472,8 @@ public class AbstractPage {
   }
 
   public void waitForAllElementsPresence(WebDriver driver, String locator) {
-    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT, LONG_TIMEOUT_ADJUST));
+    WebDriverWait waitExplicit;
+     waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT, LONG_TIMEOUT_ADJUST));
     byLocator = By.xpath(locator);
     waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byLocator));
   }
@@ -488,7 +489,7 @@ public class AbstractPage {
   }
 
   public void waitForAllElementsPresenceById(WebDriver driver, String locator) {
-    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
+    WebDriverWait waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     byLocator = By.id(locator);
     waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(byLocator));
   }
@@ -526,7 +527,7 @@ public class AbstractPage {
   }
 
   public void waitForAlertPresence(WebDriver driver) {
-    waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
+    WebDriverWait waitExplicit = new WebDriverWait(driver, Duration.ofSeconds(LONG_TIMEOUT));
     waitExplicit.until(ExpectedConditions.alertIsPresent());
   }
 

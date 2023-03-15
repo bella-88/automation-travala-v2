@@ -16,13 +16,13 @@ import org.junit.runner.RunWith;
 //  tags = {"    @Vote"}
 //  tags = {"    @BuyTravelCredit, @BuyGifGCard"}
 //  tags = {"      @nft"}
-//  tags = {"      @Concierge"}
+  tags = {"      @Concierge"}
 //  tags = {" @BuyGifGCard"}
 //  tags = {"     @TRAVO-15371"}
 //  tags = {"@TRAVO-15348"}
 //  tags = {"     @CheckOut"}
 //  tags = {"      @Property"}
-  tags = {"@footer"}
+//  tags = {"@footer"}
 //  tags = {"@payment"}
 //  tags = {"@BuyTravelCredit"}
 //  tags = {"      @Search"}
